@@ -1,0 +1,44 @@
+body {
+  margin:0;
+  font-family: 'Rubik', sans-serif;
+  color: #342b38;
+  height:100vh;
+  background-color: bisque;
+}
+.sign-up-wrapper {
+  width: 50vw;
+  background-color: rgba(255, 255, 255, 0.4);
+  height: 100vh;
+}
+h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-left: 3rem;
+  padding-top: 5rem;
+}
+p {
+  width: 70%;
+  font-size: 2rem;
+  margin-left: 3rem;
+}
+.sing-up-form {
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+ 
+}
+.sign-up-button {
+  background-color: #000;
+  color: #FFF;
+  width: 200px;
+  height: 30px;;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  width: 80%;
+}
