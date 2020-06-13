@@ -1,0 +1,35 @@
+body {
+  background-color: #000;
+  color: #fff;
+  font-family:'Roboto Mono', monospace;
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  width:50%;
+  padding-top: 2rem;
+  margin:auto;
+}
+h1 {
+  text-decoration: underline;
+  text-decoration-color: #F7DC6F;
+}
+.keyInput {
+  margin-bottom:1rem;
+  width: 50px;
+}
+.textInput {
+  padding:0.4rem;
+  width:100%;
+  height: 200px;
+  font-size: 1rem;
+  
+}
+.clearBtn {
+  background-color: #F7DC6F;
+  font-size: 1.3rem;
+  border:2px solid #F7DC6F ;
+  border-radius:0.2rem;
+  margin-top:20px;
+  height:2rem;
+  width:8rem;
+}
