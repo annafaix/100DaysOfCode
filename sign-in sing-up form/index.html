@@ -7,12 +7,20 @@
   <title>Sign in/Sing up Form - double slider</title>
 </head>
 <body>
-  <div class="sign-up-wrapper">
-    <h1>Create account</h1>
-    <p>Sign up to get full access to all amazing stuff! </p>
- 
-    <section class="sing-up-form">
-        <form action="">
+  <section class="container-overlay">
+      <h1>Sign up</h1>
+      <p>Create account to get full access to all amazing stuff! </p>
+  </section>
+
+    <section class="sign-up-wrapper" >
+        <h2>Create Account</h2>
+        <div class="sign-in-social">
+          <img src="facebook2.svg" alt="sign in with acebook">
+          <img src="google.svg" alt="sign in with Google">
+          <img src="github.svg" alt="sign in with Github">
+        </div>
+        <p>Or use email for registration </p>
+        <form action="" class="sign-up-form">
           <label for="sign-up-username">Username</label>
           <input type="text" name="" id="sign-in-username">
           <label for="sing-up-email">E-mail</label>
@@ -21,9 +29,10 @@
           <input type="password" id="sign-up-password">
           <label for="sign-up-password-repeat">Repeat Password</label>
           <input type="password" id="sign-up-password-repeat">
+          <input type="checkbox">
           <button class="sign-up-button">Sign up</button>  
         </form>
     </section>
-  </div>
+
 </body>
 </html>

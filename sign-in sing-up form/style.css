@@ -2,43 +2,65 @@ body {
   margin:0;
   font-family: 'Rubik', sans-serif;
   color: #342b38;
-  height:100vh;
   background-color: bisque;
+  background-image: url("nature-forest-trees-fog-4827.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: inherit;
+  background-position:bottom; 
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.container-overlay {
+   height:100vh;
+   width: 45vw;
+ /*   background-color: rgba(255, 255, 255,0.6);
+   background-color: rgb(	17, 110, 17, 0.6); 
+  color: #fff;*/
 }
 .sign-up-wrapper {
-  width: 50vw;
-  background-color: rgba(255, 255, 255, 0.4);
+  width: 55vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF;
   height: 100vh;
+  justify-content: center;
 }
+
 h1 {
-  font-size: 3rem;
-  font-weight: 400;
-  margin-left: 3rem;
-  padding-top: 5rem;
+  font-size: 5rem;
+  font-weight: 100;
+  margin-top: 80px;
 }
 p {
-  width: 70%;
   font-size: 2rem;
-  margin-left: 3rem;
 }
-.sing-up-form {
-  width: 50vw;
+.sign-up-form {
+  width: 80%;
   display: flex;
   justify-content: center;
  
-}
-.sign-up-button {
-  background-color: #000;
-  color: #FFF;
-  width: 200px;
-  height: 30px;;
-  border: 1px solid #000;
-  border-radius: 5px;
-}
-form{
-  display: flex;
   flex-direction: column;
   justify-content: center;
   justify-items: center;
   width: 80%;
+  text-transform: uppercase ;
+  align-self: center;
+}
+.sign-up-button {
+  background-color:#072c07;
+  color: #FFF;
+  width: 150;
+  height: 40px;
+  border: 1px solid#072c07;
+  border-radius: 3px;
+  font-size: 1.2rem;
+  }
+form input {
+  border: none;
+  border-bottom: 2px solid #342b38;
+  margin-bottom: 20px;
 }
