@@ -1,8 +1,6 @@
 body {
   margin:0;
-  font-family: 'Rubik', sans-serif;
   color: #342b38;
-  background-color: bisque;
   background-image: url("nature-forest-trees-fog-4827.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -12,43 +10,93 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-}
+  font-family: 'Open Sans', sans-serif;
 
+
+}
+@media screen and (max-width: 480px) {
+ 
+}
 .container-overlay {
+  display: flex;
    height:100vh;
-   width: 45vw;
- /*   background-color: rgba(255, 255, 255,0.6);
-   background-color: rgb(	17, 110, 17, 0.6); 
+   width: 100vw;
+   padding-left: 5%;
+   background-color:rgba(17, 194, 164, 0.3);
+   justify-content: space-between;
+   /*background-color: rgb(	17, 110, 17, 0.6); 
   color: #fff;*/
 }
-.sign-up-wrapper {
-  width: 55vw;
-  display: flex;
-  flex-direction: column;
-  background-color: #FFF;
-  height: 100vh;
-  justify-content: center;
+.container-overlay div {
+  width: 30%;
 }
 
-h1 {
+.container-overlay h1 {
   font-size: 5rem;
   font-weight: 100;
   margin-top: 80px;
+  font-family: 'Staatliches', cursive;
+  text-transform: uppercase;
+  
 }
-p {
+.container-overlay p {
   font-size: 2rem;
+  width: 80%;
+}
+
+.container-overlay button {
+  width: 150px;
+  height: 40px;
+  color:#FFF ;
+  background-color: #321069;
+  border: 2px solid #321069;
+  border-radius: 0;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.container-overlay img {
+  position: absolute;
+  bottom: 20px;
+  width: 4rem;
+}
+
+.sign-up-wrapper {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF;
+  height: 100vh; 
+  position: absolute;
+  right: 0;
+}
+h2{
+  color:rgb(17, 194, 164);
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Staatliches', cursive;
+  text-transform: uppercase;
+}
+.sign-up-wrapper p {
+  text-align: center;
+}
+.sign-up-social {
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+}
+.sign-up-social img {
+  margin-right: 15px;
 }
 .sign-up-form {
-  width: 80%;
   display: flex;
   justify-content: center;
- 
   flex-direction: column;
   justify-content: center;
   justify-items: center;
   width: 80%;
   text-transform: uppercase ;
   align-self: center;
+  z-index: 10;
 }
 .sign-up-button {
   background-color:#072c07;
@@ -58,9 +106,13 @@ p {
   border: 1px solid#072c07;
   border-radius: 3px;
   font-size: 1.2rem;
-  }
+}
 form input {
   border: none;
   border-bottom: 2px solid #342b38;
-  margin-bottom: 20px;
+  border-radius: 0;
+  display: block;
+  line-height: 1;
+  margin-bottom: 0.5em;
+  padding: 0.85em 0.75em 0.75em 0.75em;
 }

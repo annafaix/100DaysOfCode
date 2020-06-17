@@ -2,37 +2,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Staatliches&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Sign in/Sing up Form - double slider</title>
 </head>
 <body>
   <section class="container-overlay">
+    <div>
+      <h1>Welcome back!</h1>
+      <p>To keep connected with us please login with your personal info! </p>
+      <button class="">Sign in</button>
+      <img src="default-monochrome-black.svg" alt="logo logo">  
+    </div>
+    <div>
       <h1>Sign up</h1>
       <p>Create account to get full access to all amazing stuff! </p>
+      <button class="">Sign up</button>  
+    </div>
   </section>
 
-    <section class="sign-up-wrapper" >
-        <h2>Create Account</h2>
-        <div class="sign-in-social">
-          <img src="facebook2.svg" alt="sign in with acebook">
-          <img src="google.svg" alt="sign in with Google">
-          <img src="github.svg" alt="sign in with Github">
-        </div>
-        <p>Or use email for registration </p>
-        <form action="" class="sign-up-form">
-          <label for="sign-up-username">Username</label>
-          <input type="text" name="" id="sign-in-username">
-          <label for="sing-up-email">E-mail</label>
-          <input type="email" id="sing-up-email">
-          <label for="sign-up-password">Password</label>
-          <input type="password" id="sign-up-password">
-          <label for="sign-up-password-repeat">Repeat Password</label>
-          <input type="password" id="sign-up-password-repeat">
-          <input type="checkbox">
-          <button class="sign-up-button">Sign up</button>  
-        </form>
-    </section>
+ <section class="sign-up-wrapper" >
+      <h2>Create Account</h2>
+      <div class="sign-up-social">
+        <img src="facebook2.svg" alt="sign in with acebook">
+        <img src="google.svg" alt="sign in with Google">
+        <img src="github.svg" alt="sign in with Github">
+      </div>
+      <p>Or use email for registration </p>
+      <form action="" class="sign-up-form">
+        <label for="sign-up-username">Username</label>
+        <input type="text" name="" id="sign-in-username">
+        <label for="sing-up-email">E-mail</label>
+        <input type="email" id="sing-up-email">
+        <label for="sign-up-password">Password</label>
+        <input type="password" id="sign-up-password">
+        <label for="sign-up-password-repeat">Repeat Password</label>
+        <input type="password" id="sign-up-password-repeat">
+        <label>
+          <input type="checkbox" value="agree" class="agree">By signing up I agree with <a href="/">terms and conditions.</a>
+        </label>
+        <button class="sign-up-button">Sign up</button>  
+      </form>
+  </section> 
 
 </body>
 </html>
