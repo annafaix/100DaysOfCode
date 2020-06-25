@@ -1,18 +1,7 @@
 body {
   margin:0;
   color: #342b38;
-  background-image: url("nature-forest-trees-fog-4827.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-origin: inherit;
-  background-position:bottom; 
-  height: 100vh;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
   font-family: 'Open Sans', sans-serif;
-
-
 }
 @media screen and (max-width: 480px) {
  
@@ -26,6 +15,16 @@ body {
    justify-content: space-between;
    /*background-color: rgb(	17, 110, 17, 0.6); 
   color: #fff;*/
+  z-index: 5;
+  background-image: url("nature-forest-trees-fog-4827.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: inherit;
+  background-position:bottom; 
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
 }
 .container-overlay div {
   width: 30%;
@@ -60,14 +59,22 @@ body {
   width: 4rem;
 }
 
+.sign-in-wrapper,
 .sign-up-wrapper {
-  width: 60%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   background-color: #FFF;
   height: 100vh; 
   position: absolute;
+  
+}
+.sign-up-wrapper {
   right: 0;
+}
+.sign-in-wrapper {
+  left: 0;
+  z-index: 0;
 }
 h2{
   color:rgb(17, 194, 164);
@@ -98,6 +105,7 @@ h2{
   align-self: center;
   z-index: 10;
 }
+.sign-in-button, 
 .sign-up-button {
   background-color:#072c07;
   color: #FFF;
@@ -106,13 +114,12 @@ h2{
   border: 1px solid#072c07;
   border-radius: 3px;
   font-size: 1.2rem;
+  text-transform: uppercase;
 }
 form input {
   border: none;
   border-bottom: 2px solid #342b38;
   border-radius: 0;
-  display: block;
-  line-height: 1;
   margin-bottom: 0.5em;
   padding: 0.85em 0.75em 0.75em 0.75em;
 }
