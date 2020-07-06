@@ -11,5 +11,5 @@ Why? -> to be (even) better front-end developer
 1. **Caeser Cipher**
   * quick preview in [CodePen](https://codepen.io/AnnaFaix/pen/YLNvmK?editors=0010)
 2. **Sign in/sign up form**
-  * just html and css-structure
+  * Sign in/up form with animation effect 
 

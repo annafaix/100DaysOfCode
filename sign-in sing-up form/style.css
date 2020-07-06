@@ -3,7 +3,8 @@ body {
   color: #342b38;
   font-family: 'Open Sans', sans-serif;
   overflow-x: hidden;
-
+  background-color:rgba(17, 194, 164, 0.3);
+  box-sizing: border-box;
 }
 @media screen and (max-width: 480px) {
  
@@ -54,18 +55,19 @@ h2{
 }
 .sign-in-button, 
 .sign-up-button {
-  background-color:transparent;
-  color: tomato;
+  background-color:tomato;
+  font-family: 'Staatliches', cursive;
+  color: midnightblue;
   width: 200px;
   height: 50px;
   border: 2px solid tomato;
   border-radius: 0px;
   font-size: 1.5rem;
-  text-transform: uppercase;
+  letter-spacing: 1px;
   margin-top: 2rem;
   align-self: center;
 }
-form input {
+form input[type="text"], input[type="email"], input[type="password"] {
   border: none;
   border-bottom: 2px solid #342b38;
   border-radius: 0;
@@ -73,29 +75,6 @@ form input {
   padding: 0.85em 0.75em 0.75em 0.75em;
 }
 
-.overlay {
-  position:absolute;
-  z-index: 10;
-  display: flex;
-  background-color:rgba(17, 194, 164, 0.3);
-  transition: left 3s;
-	top: 0;
-	left: 50%;
-	width: 50%;
-	height: 100%;
-	overflow: hidden;
-	transition: transform 0.6s ease-in-out;
-
-}
-
-.overlay-container {
-  left: -100%;
-	height: 100%;
-	width: 200%;
-  transform: translateX(0);
-  transition: transform 0.6s ease-in-out;
-  position: relative;
-}
 .overlay-section  {
   display: flex;
   align-items: center;
@@ -103,22 +82,21 @@ form input {
   position: absolute;
 	justify-content: center;
 	flex-direction: column;
-	
-	top: 0;
-	height: 100%;
-  left: 100%;
-  width: 100%;
-	transform: translateX(0);
-	transition: transform 0.6s ease-in-out;
+  top: 0;
+  z-index: 2;
+  width: 50%;
+  transition: transform 1s ease-in-out;
+  transform: translateX(0%);
+  margin: auto;
 
 }
 
 #sign-in-section {
-  right: 0;
+  left: 50%;
   text-align: end;
+  z-index: 0;
 }
 #sign-up-section {
-  left: 0;
   text-align: start;
 }
 .overlay-section button {
@@ -127,6 +105,7 @@ form input {
   width: 150px;
   height: 50px;
   border: 2px solid midnightblue;
+  font-family: 'Staatliches', cursive;
   border-radius:0px;
   font-size: 1.3rem; 
   text-transform: uppercase;
@@ -144,42 +123,52 @@ form input {
   position: absolute;
   display: flex;
   flex-direction: column;
-
   height: 100%;
   margin: auto;
   box-shadow: 10px 10px 55px grey;
   justify-content: center;
-}
-.sign-up-social img:hover {
+  transform: translateX(0%);
+  transition: transform 1s ease-in-out; 
 
+  z-index: 2;
 }
-#sign-in-form-section {
-  z-index: 1;
-}
-#sign-up-form-section{
-  z-index: 1;
-}
+
 .overlay-transform {
-  transition: left 3s;
-/*   animation-name: overlay-transform;
-  animation-duration: 4s; */
-  left: 50%;
-}
-.forms-transform {
-  transition: left 3s;
-  left: -50%;
+  transform: translateX(-100%);
+  transition: transform 1s ease-in-out; 
   
+}
+.sign-in-form-transform {
+  transform: translateX(100%);
+  transition: transform 1s ease-in-out; 
+  z-index: 100;
+  animation: sign-in-form-transform 0.3s;
+}
+.sign-up-form-transform {
+  transform: translateX(100%);
+  transition: transform 1s ease-in-out; 
 }
 
 /* The animation code */
-@keyframes overlay-transform {
-  from {background-color: red;}
-  to {background-color: yellow;}
+@keyframes sign-in-form-transform {
+  from { opacity: 0;  }
+  to {opacity: 1; }
 }
 
-/* The element to apply the animation to
-div {
+@keyframes sign-up-form-transform {
+  from { z-index: 0}
+  to {z-index: 20;}
+}
+.sign-up-form a {
+  color: #000;
+}
 
-  animation-name: example;
-  animation-duration: 4s;
-} */
+.sign-up-form span {
+  display: none;
+}
+
+.error-msg{
+  display: inline;
+  background-color: red;
+  padding:5px;
+}
