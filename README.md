@@ -12,4 +12,5 @@ Why? -> to be (even) better front-end developer
   * quick preview in [CodePen](https://codepen.io/AnnaFaix/pen/YLNvmK?editors=0010)
 2. **Sign in/sign up form**
   * Sign in/up form with animation effect 
-
+3. **Web shop**
+  * using React
