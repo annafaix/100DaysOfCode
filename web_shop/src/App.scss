@@ -1,0 +1,71 @@
+body  {
+  margin: 0;
+  font-family: "Open sans";
+}
+.App {
+  text-align: center;
+}
+.navigation {
+  color: #FFF;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.navigation-menu {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: #282c34;
+ 
+  a  {
+    color: #FFF;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 1.5rem;
+    text-transform: uppercase;
+  }
+ 
+}
+.logo{
+  width: 5rem;
+  background-color: #fff;
+  margin: 0 2rem;
+  padding: 0 2rem;
+  border-bottom: 2px solid #282c34;
+}
+.bookList {
+  list-style:none;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 0 ;
+  margin: 2rem;
+
+  li {
+    width: 100%;
+    min-height: 15rem;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    text-align: center;
+    justify-content: space-between;
+    cursor: pointer;
+    
+    h3{
+    margin: 1rem;
+  }
+  .price{
+    background-color: lightgreen;
+    margin: 0;
+    height: 15%;
+    font-size: 1.2rem;
+    
+    }
+  }
+}

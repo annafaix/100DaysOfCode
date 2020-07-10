@@ -2,7 +2,7 @@
  {
   "id": 1,
   "author": "Edith Eva Eger",
-  "book_image": ".jpg",
+  "book_image": "./images/thechoice.jpg",
   "description": "THE AWARD-WINNING SUNDAY TIMES AND NEW YORK TIMES BESTSELLER Even in hell, hope can flower 'I'll be forever changed by her story' - Oprah Winfrey 'Extraordinary ... will stick with you long after you read it' - Bill Gates '",
   "genre": "" ,
   "price": 18,
@@ -13,7 +13,7 @@
 {
   "id": 2,
   "author": "David Mitchell",
-  "book_image": ".jpg",
+  "book_image": "./images/cloudatlas.jpg",
   "description": "In his captivating third novel, Mitchell erases the boundaries of language, genre, and time to offer a meditation on humanity's dangerous will to power, and where it may lead.",
   "genre": "" ,
   "price": 20.99,
@@ -24,7 +24,7 @@
  {
   "id": 3,
   "author": "Robert Iger",
-  "book_image": ".jpg",
+  "book_image": "./images/ride-of-a-lifetime.jpg",
   "description": "A grand vision defined: The CEO of The Walt Disney Company shares the ideas and values he has used to reinvent one of the most beloved companies in the world.",
   "genre": "" ,
   "price": 19.99,
@@ -35,7 +35,7 @@
  {
   "id": 4,
   "author": "Abhijit V Banerjee, Esther Duflor",
-  "book_image": ".jpg",
+  "book_image": "./images/good-economics-for-hard-times.jpg",
   "description": "FROM THE WINNERS OF THE 2019 NOBEL PRIZE IN ECONOMICS 'Wonderfully refreshing . . . A must read' Thomas Piketty In this revolutionary book, prize-winning economists Abhijit V. Banerjee and Esther Duflo show how economics, when done right, can help us solve the thorniest social and political problems of our day. From immigration to inequality, slowing growth to accelerating climate change, we have the resources to address the challenges we face but we are so often blinded by ideology.",
   "genre": "" ,
   "price": 25.99,
@@ -46,7 +46,7 @@
  {
   "id": 5,
   "author": "Hans Rosling, Ola Rosling, Anna Rosling Ronnlund",
-  "book_image": ".jpg",
+  "book_image": "./images/factfulness.jpg",
   "description": "Factfulness: The stress-reducing habit of only carrying opinions for which you have strong supporting facts. When asked simple questions about global trends - why the world's population is increasing; how many young women go to school; how many of us live in poverty - we systematically get the answers wrong. So wrong that a chimpanzee choosing answers at random will consistently outguess journalists, Nobel laureates, and investment bankers.",
   "genre": "" ,
   "price": 10.99,
