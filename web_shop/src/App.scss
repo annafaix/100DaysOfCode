@@ -3,16 +3,19 @@ body  {
   font-family: "Open sans";
 }
 .App {
+  position: relative;
   text-align: center;
 }
-main {
-  margin: 1rem 3rem;
-}
+
 .navigation {
   color: #FFF;
   height: 5rem;
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
 }
 .navigation-menu {
   list-style: none;
@@ -24,6 +27,7 @@ main {
   height: 100%;
   width: 100%;
   background-color: #282c34;
+  opacity: 0.9;
  
   a  {
     color: #FFF;
@@ -37,9 +41,20 @@ main {
 .logo{
   width: 5rem;
   background-color: #fff;
-  margin: 0 2rem;
-  padding: 0 2rem;
+  padding: 0 3rem;
   border-bottom: 2px solid #282c34;
+}
+main {
+  margin: 1rem 3rem;
+  position: relative;
+  top: 6rem;
+}
+.introduction {
+  p{
+    font-style: italic;
+    
+    text-align: center;
+  }
 }
 .bookList {
   list-style:none;
@@ -66,16 +81,19 @@ main {
       height: 100%;
       max-height: auto ;
     }
+    div {
+      width: 100%;
 
-    h3{
-    margin: 1rem;
-  }
-  .price{
-    background-color: lightgreen;
-    margin: 0;
-    height: 15%;
-    font-size: 1.2rem;
-    
+      h3{
+      margin: 1rem;
+     }
+    .price{
+      //background-color: lightgreen;
+      margin: 0;
+      padding: 0.7rem;
+      font-size: 1.2rem;      
+      }
+
     }
   }
 }

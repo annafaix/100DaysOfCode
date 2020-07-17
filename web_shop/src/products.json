@@ -1,15 +1,4 @@
 [
- {
-  "id": 1,
-  "author": "Edith Eva Eger",
-  "book_image": "/images/thechoice.jpg",
-  "description": "THE AWARD-WINNING SUNDAY TIMES AND NEW YORK TIMES BESTSELLER Even in hell, hope can flower 'I'll be forever changed by her story' - Oprah Winfrey 'Extraordinary ... will stick with you long after you read it' - Bill Gates '",
-  "genre": "" ,
-  "price": 18,
-  "product_url": "https://www.bokus.com/bok/9781501130793/choice/",
-  "stock": 150,
-  "title": "The Choice"
-}, 
 {
   "id": 2,
   "author": "David Mitchell",
@@ -19,7 +8,7 @@
   "price": 20.99,
   "product_url": "https://www.bokus.com/bok/9780340822784/cloud-atlas/",
   "stock": 105,
-  "title": "Clout Atlas"
+  "title": "Cloud Atlas"
  },
  {
   "id": 3,
