@@ -24,16 +24,16 @@ function Cart(){
 
 function ProductList(){
   const booksItem = products.map((element) => {
-    let style = {
-      backgroundImage: `url('${element.book_image}')`
-    }
    return(
     <a key={element.id}>
-      <li style={style} >
+      <li>
         <img src={element.book_image} alt= { `cover of ${element.title}` } />
+        <div>
+
         <h2> {element.title}</h2>
         <h3>{element.author}</h3>
         <p className="price">{element.price} ‎€</p>
+        </div>
       </li>
     </a>)
   });
@@ -74,10 +74,12 @@ function App() {
         <header >
           <Navigation></Navigation>
         </header>
+        <main>
           <Switch>
             <Route path="/cart" component={Cart} />
             <Route exact path="/" component={ProductList} />
           </Switch>
+        </main>
       </Router>
       <footer></footer>
     </div>
