@@ -28,15 +28,14 @@ body  {
   width: 100%;
   background-color: #282c34;
   opacity: 0.9;
- 
-  a  {
-    color: #FFF;
-    font-size: 1.2rem;
-    text-decoration: none;
-    padding: 1.5rem;
-    text-transform: uppercase;
-  }
- 
+
+}
+.navigation-menu a  {
+  color: #FFF;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 1.5rem;
+  text-transform: uppercase;
 }
 .logo{
   width: 5rem;
@@ -49,13 +48,13 @@ main {
   position: relative;
   top: 6rem;
 }
-.introduction {
-  p{
+
+.introduction p{
     font-style: italic;
     
     text-align: center;
   }
-}
+
 .bookList {
   list-style:none;
   display: grid;
@@ -64,36 +63,36 @@ main {
   padding: 0 ;
   margin: 2rem;
 
-  li {
+li {
     width: 100%;
     min-height: 15rem;
     height: 280px; 
     display: flex;
    
     flex-direction: row;
-    border: 1px solid black;
+   
     text-align: center;
     justify-content: space-between;
     cursor: pointer;
+    box-shadow: 0px 0px 5px #282c34;
     
     img{
-      width: auto;
-      height: 100%;
-      max-height: auto ;
-    }
+       width: auto;
+       height: 100%;
+       max-height: auto ;
+     }
     div {
       width: 100%;
 
       h3{
       margin: 1rem;
-     }
+      }
+      }
+    }
     .price{
-      //background-color: lightgreen;
+      background-color: lightgreen;
       margin: 0;
       padding: 0.7rem;
       font-size: 1.2rem;      
       }
-
-    }
   }
-}
