@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ProductItem from './ProductItem';
+import { useSelector } from 'react-redux';
 
-function ProductList(props){
-  let books = props.products;
-
-   // Why not display products in different order when comoponent will mount? 
+const ProductList = () => {
+  const booklist = useSelector(state => state.books) ;
+   // Why not to display products in different order when comoponent will mount? 
  let shuffleArray = (arr) => {
   let index = arr.length;
   let tempValue, randomIndex; 
@@ -19,12 +19,11 @@ function ProductList(props){
     arr[randomIndex] = tempValue;
   }
 }
-
 /*   useEffect(() =>{
     updateList(shuffleArray(list)) ;
   }, []) */
 
-  let booksItems = books.map((element) => {
+  let booksItems = booklist.map((element) => {
     return(
       <ProductItem item={element} key={element.id} />
      )
@@ -32,10 +31,10 @@ function ProductList(props){
 
   return(
     <React.Fragment>
-    <ul className="bookList">
-      {booksItems}
-    </ul>
-  </React.Fragment>
+      <ul className="bookList">
+        {booksItems}
+      </ul>
+    </React.Fragment>
   )
 }
 

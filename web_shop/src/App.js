@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import './App.scss';
 import logo from './default-monochrome-black.svg'
@@ -6,23 +6,25 @@ import products from './products.json';
 import Cart from './features/Cart/Cart';
 import ProductList from './features/ProductList';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
+import { useSelector } from 'react-redux'
 
  
 function Navigation(){
+  let amountInCart = useSelector(state=> state.cart.value);
+  let showAmount = (amountInCart>0) ? "inline" : "none";
   return (
     <nav className="navigation">
       <img src={logo} alt="Logo"  className="logo"/>
       <ul className="navigation-menu">
         <li><Link to="/">All Books</Link> </li>
-        <li><Link to="/cart">Your Cart <AiOutlineShoppingCart/></Link></li>
+  <li><Link to="/cart">Your Cart <AiOutlineShoppingCart/>
+  <span style={{display: showAmount}}>{amountInCart}</span></Link></li>
       </ul>
     </nav>
   )
 }
 
 function App() {
-  let [list, updateList] = useState(products);
-
   return (
     <div className="App">
       <Router>
@@ -41,7 +43,7 @@ function App() {
                   <br/>Choose a book, read more details about it and "add" it to your cart/wish list! Almost like in a real online book store..
                 </p>
               </div>
-              <ProductList products={list}/> 
+              <ProductList/> 
             </Route>
           </Switch>
         </main>

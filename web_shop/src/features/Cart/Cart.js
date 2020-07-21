@@ -1,6 +1,7 @@
 //a React component that shows the UI for the counter feature
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
+import './Cart.scss'
 
 function Cart(){
  const cartContent = useSelector(state=> state.cart); 
@@ -10,9 +11,8 @@ function Cart(){
   return(
     <li key={book.id} >
       <img src={book.book_image} alt= { `cover of ${book.title}` } />
-      
-          <h2> {book.title}</h2>
-          <h3>{book.author}</h3>
+        <h2> {book.title}</h2>
+        <h3>{book.author}</h3>
     </li>
    )
  });
