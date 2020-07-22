@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import './App.scss';
 import logo from './default-monochrome-black.svg'
-import products from './products.json';
 import Cart from './features/Cart/Cart';
 import ProductList from './features/ProductList';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
@@ -17,8 +16,8 @@ function Navigation(){
       <img src={logo} alt="Logo"  className="logo"/>
       <ul className="navigation-menu">
         <li><Link to="/">All Books</Link> </li>
-  <li><Link to="/cart">Your Cart <AiOutlineShoppingCart/>
-  <span style={{display: showAmount}}>{amountInCart}</span></Link></li>
+        <li><Link to="/cart">Your Cart <AiOutlineShoppingCart/>
+        <span className="amountInCart" style={{display: showAmount}}>{amountInCart}</span></Link></li>
       </ul>
     </nav>
   )
@@ -44,6 +43,8 @@ function App() {
                 </p>
               </div>
               <ProductList/> 
+            </Route>
+            <Route path="/:bookId">
             </Route>
           </Switch>
         </main>

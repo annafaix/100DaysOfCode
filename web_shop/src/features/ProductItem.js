@@ -1,15 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { AiOutlineShoppingCart } from 'react-icons/ai';
+import { AiOutlineShoppingCart, AiOutlineCheck } from 'react-icons/ai';
 import { increment } from './Cart/cartSlice.js'
 
-const ProductItem = (props) => {
+export const ProductItem = (props) => {
   const bookItem = useSelector(state => state.books);
-  console.log(bookItem)
   let item = props.item;
   const dispatch = useDispatch();
-  let added = () => {
+  const addToCart = "Add to Cart";
+  const cartIcon = <AiOutlineShoppingCart/>;
+  let [add, handleAdd] = useState(addToCart);
+  let [icon, handleIcon] = useState(cartIcon);
 
+  let timeoutHandle =()=> {
+    handleAdd("Added");
+    handleIcon(<AiOutlineCheck/>)
+    setTimeout(()=> {
+      handleAdd(addToCart) 
+      handleIcon(cartIcon)
+    }, 1000);
+    
   }
 
   return(
@@ -20,15 +30,15 @@ const ProductItem = (props) => {
           <h2>{item.title}</h2>
           <h3>{item.author}</h3>
           <span className="genre">{item.genre}</span>
-          <p className="">{item.description.substring(0,80)}...</p>
+          <p>{item.description.substring(0,80)}...</p>
           <div className="row">
             <p className="price">{item.price} ‎€ </p>
             <button 
               aria-label="Add to cart"
-              onClick={()=> dispatch(increment(item))}
+              onClick={()=> dispatch(increment(item), timeoutHandle())}
               className="addToCartBtn">
-                Add to cart
-              <AiOutlineShoppingCart/>
+                {add}
+                {icon}
             </button>
             </div>
         </div>
