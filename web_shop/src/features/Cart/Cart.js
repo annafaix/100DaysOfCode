@@ -4,30 +4,34 @@ import { useSelector } from 'react-redux';
 import './Cart.scss'
 
 function Cart(){
- const cartContent = useSelector(state=> state.cart); 
- const booksInCart = cartContent.books;
+  const cartContent = useSelector(state=> state.cart); 
+  let bookInCart = cartContent.books;
+  const cartTotalPrice = useSelector(state => state.cart.price);
 
- let booksItems = booksInCart.map((book) => {
-  return(
-    <li key={book.id} >
-      <img src={book.book_image} alt= { `cover of ${book.title}` } />
-        <h2> {book.title}</h2>
-        <h3>{book.author}</h3>
-    </li>
-   )
- });
+  let booksItems = bookInCart.map(book => {
+    console.log("cart", bookInCart[book])
+    return(
+      <li key={bookInCart[book]} >
+        <img src={book.book_image} alt= { `cover of ${book.title}` } />
+          <h2> {book.title}</h2>
+          <h3>{book.author}</h3>
+      </li>
+    )
+  });
 
-  return(
-    <React.Fragment>
-      <h1>Cart</h1>  
-      <ul>
-        {booksItems}
-      </ul>
-      <div>
-        Total price: {cartContent.price}
-      </div>
-    </React.Fragment>
-  )
-}
+  let roundPrice = Math.round(cartTotalPrice * 100) / 100;
 
-export default Cart;
+    return(
+      <React.Fragment>
+        <h1>Cart</h1>  
+        <ul>
+          {booksItems}
+        </ul>
+        <div>
+          Total price: {roundPrice} €
+        </div>
+      </React.Fragment>
+    )
+  }
+
+  export default Cart;

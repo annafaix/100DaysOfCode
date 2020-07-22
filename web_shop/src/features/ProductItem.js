@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { AiOutlineShoppingCart, AiOutlineCheck } from 'react-icons/ai';
 import { increment } from './Cart/cartSlice.js'
 
 export const ProductItem = (props) => {
-  const bookItem = useSelector(state => state.books);
+
   let item = props.item;
   const dispatch = useDispatch();
   const addToCart = "Add to Cart";
