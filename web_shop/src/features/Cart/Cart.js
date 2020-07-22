@@ -9,7 +9,6 @@ function Cart(){
   const cartTotalPrice = useSelector(state => state.cart.price);
 
   let booksItems = bookInCart.map(book => {
-    console.log("cart", bookInCart[book])
     return(
       <li key={bookInCart[book]} >
         <img src={book.book_image} alt= { `cover of ${book.title}` } />
