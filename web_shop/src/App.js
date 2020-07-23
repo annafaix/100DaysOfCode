@@ -38,8 +38,8 @@ function App() {
             <Route exact path="/"  >
               <div className="introduction">
                 <h1>Recommended Books to read in the summer</h1>
-                <p>Here you can find some inspiration for summer reading. These are the books I would like to read in the next months. 
-                  <br/>Choose a book, read more details about it and "add" it to your cart/wish list! Almost like in a real online book store..
+                <p>Here you can find some inspiration for summer reading.  These are the books I would like to read in the next months. 
+                  <br/>Choose a book, read more details about it and "add" it to your cart/wish list! Almost like in a real online book store...
                 </p>
               </div>
               <ProductList/> 

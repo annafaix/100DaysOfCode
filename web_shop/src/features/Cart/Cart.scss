@@ -1,8 +1,31 @@
-ul{
-/*   list-style:none;
-  display: grid;
-  grid-gap: 3rem;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+$marineBlue:#00203FFF;
+.cartList{
+  list-style:none;
+  display: flex;
+  flex-direction: column;
   padding: 0 ;
-  margin: 2rem; */
+  margin: 2rem;
+
+  li {
+    border-bottom: 1px solid $marineBlue;
+    display: flex;
+    justify-content: space-between;
+
+    .removeFromCartBtn{
+      border: none;
+      background-color: red;
+      border-radius: 2px;
+      color: #FFF;
+      cursor: pointer;
+      margin: 0;
+      padding: 0.7rem;
+      font-size: 1.2rem; 
+    }
+  }
+}
+
+.amountToPay{
+  margin:2rem;
+  text-align: end;
+  font-size: 1.6rem;
 }
