@@ -10,8 +10,8 @@ This is my personal challenge based on [Weekly Coding challenge](https://www.flo
 **1. Caeser Cipher** :mag_right:
   - quick preview in [CodePen](https://codepen.io/AnnaFaix/pen/YLNvmK?editors=0010)
 
-**2. Sign in/sign up form**
+**2. Sign in/sign up form** :pencil2:
   - Sign in/up form with animation effect 
 
-**3. Web bookstore** :books:
-  - Recommended books for summer reading (React hooks/React routing/...)
+**3. Web bookstore** :books::heart:
+  - Recommended books for summer reading (using React hooks/Redux/React routing/React Icons/Sass..)
