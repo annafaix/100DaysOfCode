@@ -13,7 +13,7 @@ export const cartSlice = createSlice({
     increment: (state, action) => {
       state.value += 1;
       state.price += action.payload.price;
-      state.books.push(action.payload) 
+      state.books= [...state.books, action.payload]
     },
     decrement: state => {
       state.value -= 1

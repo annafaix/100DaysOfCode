@@ -6,8 +6,8 @@ import Cart from './features/Cart/Cart';
 import ProductList from './features/ProductList';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { useSelector } from 'react-redux'
+import BookDetail from './features/BookDetail';
 
- 
 function Navigation(){
   let amountInCart = useSelector(state=> state.cart.value);
   let showAmount = (amountInCart>0) ? "inline" : "none";
@@ -44,7 +44,7 @@ function App() {
               </div>
               <ProductList/> 
             </Route>
-            <Route path="/:bookId">
+            <Route path="/books/:bookId" component={BookDetail}>
             </Route>
           </Switch>
         </main>

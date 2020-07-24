@@ -6,10 +6,11 @@ $marineBlue:#00203FFF;
   padding: 0 ;
   margin: 2rem;
 
-  li {
+  .itemInCart {
     border-bottom: 1px solid $marineBlue;
     display: flex;
     justify-content: space-between;
+    padding: 1rem;
 
     .removeFromCartBtn{
       border: none;
@@ -20,6 +21,15 @@ $marineBlue:#00203FFF;
       margin: 0;
       padding: 0.7rem;
       font-size: 1.2rem; 
+      height: fit-content;
+    }
+
+    .itemInCartRow {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 30%;
+      align-self: center;;
     }
   }
 }

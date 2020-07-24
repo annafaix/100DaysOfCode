@@ -6,9 +6,11 @@ import './Cart.scss'
 
 function Cart(){
   const cartItems = useSelector(state=> state.cart); 
-  let bookInCart = cartItems.books;
+  const bookInCart = cartItems.books;
   const cartTotalPrice = useSelector(state => state.cart.price);
 
+  console.log(cartItems)
+ 
   let booksItems = bookInCart.map(book => {
     return(
       <li key={cartItems[book]} className="itemInCart">
@@ -16,24 +18,24 @@ function Cart(){
           <h2> {book.title}</h2>
           <h3>{book.author}</h3>
         </div>
-        <div>
+        <div className="itemInCartRow">
+          <button className="removeFromCartBtn" aria-label="Remove from cart"><FaRegTrashAlt/> </button>
           <p>{book.price} €</p>
-          <button className="removeFromCartBtn"><FaRegTrashAlt/> </button>
         </div>
       </li>
     )
-  });
+  }); 
 
   let roundPrice = Math.round(cartTotalPrice * 100) / 100;
   let cartContent = (bookInCart.length === 0) ? "Your cart is empty" : null;
-  
+
     return(
       <React.Fragment>
         <div className="introduction">
          <h1 >Cart</h1>  
          {cartContent}
          </div>
-         <ul className="cartList">{booksItems} </ul>
+       <ul className="cartList">{booksItems} </ul> 
         <div className="amountToPay">
           Total price: {roundPrice} €
         </div>
